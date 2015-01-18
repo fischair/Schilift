@@ -23,14 +23,11 @@ public class Lift extends Model {
     // for Tests only
     static {
         allLifts = new ArrayList<Lift>();
-        allLifts.add(new Lift("TestLift1", "Schlepplift"));
-        allLifts.add(new Lift("TestLift2", "Sessellift"));
     }
 
     Lift(String name, String type) {
         this.id = (long) allLifts.size() +1;
         this.name = name;
-        //this.seats = seats;
         this.type = type;
     }
 
@@ -49,7 +46,7 @@ public class Lift extends Model {
 
     public static void importData() {
         try {
-            File fileDir = new File("L:\\Sonstiges\\Programmieren\\Schilift\\Aufstiegshilfen.csv");
+            File fileDir = new File("Aufstiegshilfen.csv");
             BufferedReader in = new BufferedReader(new InputStreamReader(
                     new FileInputStream(fileDir), "UTF8"));
             String str;
@@ -72,7 +69,17 @@ public class Lift extends Model {
         return "Name: " + name + " Typ: " + type;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
     public static List<Lift> getAll() {
         return allLifts;
     }
+
+
 }

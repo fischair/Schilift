@@ -3,8 +3,21 @@
 <h1>Lift List</h1>
 
 <ul>
-@for(lift <- lifts) {
-    <li>@lift.toString()</li>
-}
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Type</th>
+        </thead>
+        <tbody>
+            @for(lift <- lifts) {
+                <tr>
+                    <td>@lift.getName()</td>
+                    <td>@lift.getType()</td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+
 </ul>
 
