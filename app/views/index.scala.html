@@ -3,18 +3,18 @@
 <h1>Lift List</h1>
 
 <ul>
-    <table>
+    <table border="1">
         <thead>
             <th>Name</th>
             <th>Type</th>
         </thead>
         <tbody>
-            @for(lift <- lifts) {
-                <tr>
-                    <td>@lift.getName()</td>
-                    <td>@lift.getType()</td>
-                </tr>
-            }
+        @for(lift <- lifts) {
+            <tr>
+                <td>@lift.getName()</td>
+                <td>@lift.getType()</td>
+            </tr>
+        }
         </tbody>
 
     </table>
