@@ -6,7 +6,7 @@ import play.mvc.Result;
 import views.html.index;
 
 import java.util.List;
-
+//test
 public class Application extends Controller {
 
     public static Result index() {
