@@ -1,14 +1,27 @@
 package controllers;
 
-import play.*;
-import play.mvc.*;
+import models.Lift;
+import play.mvc.Controller;
+import play.mvc.Result;
+import views.html.index;
 
-import views.html.*;
+import java.util.List;
 
 public class Application extends Controller {
 
     public static Result index() {
-        return ok(index.render("Your new application is ready."));
+
+        // import all Lifts from the CSV File
+        Lift.importData();
+        return ok(index.render(Lift.getAll()));
+    }
+
+    public static Result showList() {
+        return TODO;
+    }
+
+    public static Result showLift() {
+        return TODO;
     }
 
 }

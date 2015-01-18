@@ -1,7 +1,10 @@
-@(message: String)
+@(lifts: List[Lift])
 
-@main("Welcome to Play") {
+<h1>Lift List</h1>
 
-    @play20.welcome(message, style = "Java")
-
+<ul>
+@for(lift <- lifts) {
+    <li>@lift.toString()</li>
 }
+</ul>
+
